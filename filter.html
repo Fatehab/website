@@ -1,0 +1,63 @@
+<nav class="filtering">
+    <div class="filter">
+        <h3>Filters</h3>
+        <button class="b-filter">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Low cost</span></button>
+        <button class="b-filter">
+            <i class="fas fa-child"></i>
+            <span>Family-friendly</span></button>
+        <button class="b-filter">
+            <i class="fas fa-heart"></i>
+            <span>Romantic</span></button>
+        <button class="b-filter">
+            <i class="fas fa-dog"></i>
+            <span>Pets allowed</span></button>
+    </div>    
+    <div class="filter-result">
+        <i class="fas fa-info"></i>
+        <p>More than <span id="filter-nb">500</span> accommodations are available in this city</p>
+    </div>
+</nav>
+
+@media all and (max-width: 768px) {
+    .filter h3{
+        flex: 1 100%;
+    }
+    .b-filter:nth-child(3), .b-filter:nth-child(5){
+        order: 2;
+    }
+    .b-filter:nth-child(4) {
+        order: 1;
+    }
+}
+
+/* CSS for Filters */
+.filters {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Wrap the items to the next line when there's not enough space */
+    justify-content: flex-start; /* Align items to the left within the flex container */
+}
+
+.filter-button {
+    margin-right: 10px; /* Add spacing between buttons */
+}
+
+/* Specific styling for Low Cost and Romantic filters */
+#Low_Cost, #Romantic {
+    flex: 0 50%; /* Make them occupy 50% of the container width */
+    order: 1; /* Reset the order for all buttons */
+}
+
+#Romantic {
+    order: 2; /* Adjust the order for the "Romantic" filter */
+}
+
+#Family {
+    order: 3;
+}
+
+#Pets_allowed {
+    order: 4;
+    padding-right: 10px; /* Adjusted padding */
